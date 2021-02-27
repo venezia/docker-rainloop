@@ -1,4 +1,4 @@
-# hardware/rainloop
+# venezia/docker-rainloop
 
 ![](https://i.goopics.net/nI.png)
 
@@ -12,7 +12,7 @@ Rainloop is a simple, modern & fast web-based client. More details on the [offic
 - Based on Alpine
 - Latest Rainloop **Community Edition** (stable)
 - Contacts (DB) : sqlite, mysql or pgsql (server not built-in)
-- With Nginx and PHP7
+- With Nginx and PHP8
 - Postfixadmin-change-password plugin
 
 ### Build-time variables
@@ -36,18 +36,9 @@ Rainloop is a simple, modern & fast web-based client. More details on the [offic
 ### Docker-compose.yml
 
 ```yml
-# Full example :
-# https://github.com/hardware/mailserver/blob/master/docker-compose.sample.yml
-
 rainloop:
-  image: hardware/rainloop
+  image: quay.io/venezia/rainloop
   container_name: rainloop
   volumes:
     - /mnt/docker/rainloop:/rainloop/data
-  depends_on:
-    - mailserver
 ```
-
-#### How to setup
-
-https://github.com/hardware/mailserver/wiki/Rainloop-initial-configuration
